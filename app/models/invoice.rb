@@ -7,7 +7,12 @@ class Invoice < ActiveRecord::Base
   private
 
     def calculate_sales_tax
-      self.sales_tax = price * 0.1
+      case state
+      when 'CA'
+        self.sales_tax = price * 0.1
+      when 'FL'
+        self.sales_tax = price * 0.07
+      end
     end
 
     def calculate_service_fee
@@ -15,6 +20,6 @@ class Invoice < ActiveRecord::Base
     end
 
     def calculate_total
-      self.total = price + (price * 0.1) + ((price / 0.8) - price)
+      self.total = price + self.sales_tax + self.service_fee
     end
 end
