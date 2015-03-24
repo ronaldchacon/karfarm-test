@@ -20,6 +20,15 @@ body {
   background-color: #f5f5f5;
 }
 
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 main {
   @extend .container;
   padding-bottom: 80px;
@@ -39,3 +48,10 @@ main {
 .navbar-default .navbar-nav > li > a:hover, .navbar-karfarm .navbar-nav > li > a:hover {
   color: #888;
 }
+
+.invoicewrap {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+

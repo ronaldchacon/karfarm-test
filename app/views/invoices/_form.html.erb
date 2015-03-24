@@ -1,0 +1,5 @@
+<%= bootstrap_form_for @invoice do |f| %>
+  <%= f.text_field :price %>
+  <%= f.select :state, options_for_select({'CA' => 'CA','FL' => 'FL'}) %>
+  <%= f.submit "Submit" %>
+<% end %>

@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Invoice</h1>
+
+  <table class="table">
+    <thead>
+      <th>Subtotal</th>
+      <th>Sales Tax</th>
+      <th>Service Fee</th>
+      <th>Total</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= number_to_currency(@invoice.price, unit: '$') %></td>
+        <td><%= number_to_currency(@invoice.sales_tax, unit: '$') %></td>
+        <td><%= number_to_currency(@invoice.service_fee, unit: '$') %></td>
+        <td><%= number_to_currency(@invoice.total, unit: '$') %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

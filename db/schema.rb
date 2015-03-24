@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150324053028) do
+ActiveRecord::Schema.define(version: 20150324081705) do
 
   create_table "invoices", force: :cascade do |t|
     t.string   "state"
-    t.decimal  "price",      precision: 8, scale: 2
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.decimal  "price",       precision: 8, scale: 2
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.decimal  "sales_tax"
+    t.decimal  "service_fee"
+    t.decimal  "total"
   end
 
 end
